@@ -12,9 +12,6 @@
       <li class="nav-item">
         <a class="nav-link " href="#">Messages</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link " href="#" (click)="logout()">Logout</a>
-      </li>
     </ul>
 
     <div *ngIf="loggedIn()" class="dropdown" dropdown>
@@ -22,10 +19,10 @@
         Welcome {{authService.decodedToken?.unique_name | titlecase}}
       </a>
     
-      <div class="dropdown-menu" *dropdownMenu>
+      <div class="dropdown-menu mt-3" *dropdownMenu>
         <a class="dropdown-item" href="#"><i class="fa fa-user"></i>Edit Profile </a>
         <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="#"><i class="fa fa-sign-out"></i>Logout</a>
+        <a class="dropdown-item" (click)="logout()"><i class="fa fa-sign-out"></i>Logout</a>
       </div>
     </div>
 
