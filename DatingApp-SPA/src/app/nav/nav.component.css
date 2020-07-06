@@ -5,3 +5,8 @@
 .dropdown-item{
     cursor: pointer;
 }
+
+i{
+    position: relative;
+    right: 5px;
+}
