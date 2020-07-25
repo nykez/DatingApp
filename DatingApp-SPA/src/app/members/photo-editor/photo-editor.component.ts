@@ -70,7 +70,7 @@ export class PhotoEditorComponent implements OnInit {
       this.currentMain = this.photos.filter(p => p.isMain === true)[0];
       this.currentMain.isMain = false;
       photo.isMain = true;
-      this.getMemberPhotoChanged.emit(photo.url);
+      this.authService.changeMemberPhoto(photo.url);
     }, error => {
       this.alertify.error(error);
     });
