@@ -10,3 +10,9 @@ i{
     position: relative;
     right: 2px;
 }
+
+img{
+    max-width: 50px;
+    border: 1px solid white;
+    display: inline;
+}
