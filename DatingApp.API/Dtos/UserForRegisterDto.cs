@@ -28,7 +28,6 @@ namespace DatingApp.API.Dtos
         public string City { get; set; }
 
         public DateTime Created { get; set; }
-        
         public DateTime LastActive { get; set; }
 
         public UserForRegisterDto()
