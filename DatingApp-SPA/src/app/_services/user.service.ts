@@ -16,7 +16,7 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
-  getUsers(page?, itemsPerPage?, userParams?): Observable<PaginatedResult<User[]>> {
+  getUsers(page?, itemsPerPage?, userParams?, likesParam?): Observable<PaginatedResult<User[]>> {
     const paginatedResult: PaginatedResult<User[]> = new PaginatedResult<User[]>();
 
     let params = new HttpParams();
@@ -33,6 +33,13 @@ export class UserService {
       params = params.append('orderBy', userParams.orderBy);
     }
 
+    if (likesParam === 'Likers'){
+      params = params.append('Likers', 'true');
+    }
+
+    if (likesParam === 'Likees'){
+      params = params.append('Likees', 'true');
+    }
 
     return this.http.get<User[]>(this.baseUrl + 'users', { observe: 'response', params})
       .pipe(

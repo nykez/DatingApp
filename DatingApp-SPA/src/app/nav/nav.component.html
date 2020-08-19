@@ -41,7 +41,8 @@
 
 </nav>
 
-<div class="container mt-1">
+
+<div *ngIf="isFirstTime" class="container mt-1">
   <alert [dismissible]="true"><strong>Notice: </strong> this website is wiped clean every 24hours (all images are randomly generated, no copyright intended.)</alert>
 </div>
 

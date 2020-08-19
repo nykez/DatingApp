@@ -13,11 +13,18 @@ import { AlertModule } from 'ngx-bootstrap/alert';
 export class NavComponent implements OnInit {
   model: any = {};
   photoUrl: string;
+  isFirstTime = true;
 
   constructor(public authService: AuthService, private alertify: AlertifyService, private router: Router) { }
 
   ngOnInit() {
     this.authService.currentPhotoUrl.subscribe(photoUrl => this.photoUrl = photoUrl);
+
+    if (localStorage.getItem('seenNotice') != null)
+    {
+      this.isFirstTime = false;
+      localStorage.setItem('seenNoticed', 'seen');
+    }
   }
 
   login(){
