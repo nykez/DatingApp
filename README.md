@@ -28,6 +28,5 @@ Crash application to help further understand Typescript -- Angular (SPAs) while 
 * User Likes
 * Private Messaging System (WIP)
 * User Lists
-* Photo upload and edittinig stored via cloudinary
-* Full C# aspnetcore 3.1 webapi backend server
-
+* Photo upload and edittinig stored 
+* aspnetcore 3.1
